@@ -1,0 +1,6 @@
+terminal-tab.txt	terminal-tab.txt	/*terminal-tab.txt*
+:TerminalTabToggle	terminal-tab.txt	/*:TerminalTabToggle*
+:TerminalTabOpen	terminal-tab.txt	/*:TerminalTabOpen*
+:TerminalTabClose	terminal-tab.txt	/*:TerminalTabClose*
+g:terminal_tab_config	terminal-tab.txt	/*g:terminal_tab_config*
+

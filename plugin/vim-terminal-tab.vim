@@ -32,6 +32,7 @@ function s:Terminal_Tab_Close()
       let was_open = 1
     endif
     for window in win_nrs
+      call win_gotoid(window)
       hide
     endfor
   endfor

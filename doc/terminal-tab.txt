@@ -1,0 +1,41 @@
+terminal-tab.txt A simple plugin for managing terminals.
+
+ __      ___             _______                  _             _   _______    _
+ \ \    / (_)           |__   __|                (_)           | | |__   __|  | |
+  \ \  / / _ _ __ ___      | | ___ _ __ _ __ ___  _ _ __   __ _| |    | | __ _| |__  ___
+   \ \/ / | | '_ ` _ \     | |/ _ \ '__| '_ ` _ \| | '_ \ / _` | |    | |/ _` | '_ \/ __|
+    \  /  | | | | | | |    | |  __/ |  | | | | | | | | | | (_| | |    | | (_| | |_) \__ \
+     \/   |_|_| |_| |_|    |_|\___|_|  |_| |_| |_|_|_| |_|\__,_|_|    |_|\__,_|_.__/|___/
+=========================================================================================
+
+Manage terminals in a single toggleable tabgroup. All new terminals, including those
+created outside the tabgroup will automatically be managed and respond to the commands.
+Additionally, set a default terminal configuration with autostart commands.
+
+NOTE: This requires hidden to be true.
+
+                                        Commands
+-----------------------------------------------------------------------------------------
+
+                                           :TerminalTabToggle
+:TerminalTabToggle      Toggle visibility of all terminals and terminal tabgroup.
+                        This will also close terminals outside the tab.
+
+                                           :TerminalTabOpen
+:TerminalTabOpen        Open the terminal tabgroup if closed and pull all open
+                        terminals to it.
+
+                                           :TerminalTabclose
+TerminalTabClose        Close the terminal tabgroup if open and hide all terminals.
+
+
+                                     Configuration
+-----------------------------------------------------------------------------------------
+
+g:terminal_tab_config   This defines how many terminals to open initially and any
+                        commands to automatically run on load. It should have then
+                        shape in the example below. More features will for
+                        configuration, hence the dictionaries.
+
+                        g:terminal_tab_config = [{'load_command':'git pull'},
+                                               \ {'load_command':'start server'}]
