@@ -6,6 +6,9 @@ if exists("g:vim_terminal_tab_loader")
   finish
 endif
 
+let s:old_cpo = &cpoptions
+set cpoptions&vim
+
 let g:vim_terminal_tab_loader = 1
 let s:terminals = []
 let s:initializing = 0
@@ -103,3 +106,6 @@ augroup END
 command! TerminalTabToggle call <SID>Terminal_Tab_Open_Toggle(0)
 command! TerminalTabOpen call <SID>Terminal_Tab_Open_Toggle(1)
 command! TerminalTabClose call <SID>Terminal_Tab_Close()
+
+let &cpoptions = s:old_cpo
+unlet s:old_cpo
